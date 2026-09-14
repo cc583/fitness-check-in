@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#091e19">
+  <meta name="description" content="Andy、阿嘉、宗宗、康子和飞飞的每日健身打卡。">
+  <title>一起练 · 健身打卡</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23091e19'/%3E%3Cpath d='M13 26v12m7-17v22m24-17v12m-7-17v22M20 32h24' stroke='%23b9ff66' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root{color-scheme:dark;--ink:#f5f8f6;--muted:#91a39d;--panel:#112b24;--panel2:#17382f;--line:#294a40;--lime:#b9ff66;--mint:#68d9ad;--bg:#071713;--danger:#ff867c;font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--ink);background:radial-gradient(circle at 80% 0,#123a2e 0,transparent 34rem),var(--bg)}button{font:inherit;color:inherit}.shell{width:min(1180px,calc(100% - 32px));margin:auto;padding:28px 0 48px}.topbar,.brand,.date,.section-head,.progress-copy,.member,.task,.recent-head,.footer{display:flex;align-items:center}.topbar{justify-content:space-between;margin-bottom:48px}.brand{gap:14px}.mark{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;color:#10251f;background:var(--lime);font-size:24px;font-weight:900;box-shadow:0 10px 35px #b9ff6624}.brand h1{font-size:20px;line-height:1.1;margin:0}.brand p{font-size:13px;color:var(--muted);margin:5px 0 0}.date{gap:10px;padding:11px 15px;border:1px solid var(--line);border-radius:14px;background:#0e2720cc;font-size:14px}.date strong{font-size:16px}.eyebrow{margin:0 0 6px;color:var(--mint);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.section-head{justify-content:space-between;gap:16px}.section-head h2,.recent-head h2{margin:0;font-size:clamp(24px,3vw,38px);letter-spacing:-.04em}.hint{font-size:14px;color:var(--muted)}.members{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:22px 0 38px}.member{position:relative;gap:12px;min-width:0;padding:14px;border:1px solid var(--line);border-radius:18px;text-align:left;background:linear-gradient(145deg,#14352c,#0d241e);cursor:pointer;transition:.2s ease}.member:hover{transform:translateY(-2px);border-color:#5a8879}.member[aria-pressed=true]{border-color:var(--lime);box-shadow:0 0 0 1px var(--lime),0 15px 35px #0005;background:linear-gradient(145deg,#234f40,#133027)}.avatar{flex:0 0 44px;display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:#26493d;color:var(--lime);font-weight:900}.member[aria-pressed=true] .avatar{background:var(--lime);color:#10251f}.member b{display:block;overflow:hidden;text-overflow:ellipsis;font-size:17px}.member small{display:block;margin-top:3px;color:var(--muted);white-space:nowrap}.grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,.8fr);gap:22px}.card{border:1px solid var(--line);border-radius:24px;background:#0d251fcc;box-shadow:0 20px 60px #0003}.today{padding:24px}.progress-copy{justify-content:space-between;margin-bottom:13px}.progress-copy strong{font-size:26px}.progress-copy span{color:var(--muted);font-size:14px}.progress{height:10px;overflow:hidden;border-radius:999px;background:#24453a}.progress i{display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--mint),var(--lime));transition:width .35s ease}.tasks{display:grid;gap:10px;margin-top:22px}.task{gap:14px;width:100%;padding:15px;border:1px solid transparent;border-radius:16px;text-align:left;background:var(--panel);cursor:pointer;transition:.18s ease}.task:hover{border-color:#3a6255}.task.done{background:#1c4035}.task-icon{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;border-radius:13px;background:#20473a;font-size:21px}.task-text{flex:1}.task b{display:block;font-size:16px}.task small{display:block;margin-top:3px;color:var(--muted)}.check{display:grid;place-items:center;width:28px;height:28px;border:2px solid #59776d;border-radius:9px;color:#0d251f}.task.done .check{border-color:var(--lime);background:var(--lime)}.side{padding:22px}.recent-head{justify-content:space-between;gap:12px}.recent-head h2{font-size:25px}.summary{margin:20px 0;padding:18px;border-radius:18px;background:linear-gradient(135deg,#1b493a,#19372f)}.summary span{color:var(--muted);font-size:13px}.summary strong{display:block;margin-top:4px;font-size:30px;color:var(--lime)}.week{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}.day{min-width:0;padding:10px 3px;border:1px solid var(--line);border-radius:13px;text-align:center;background:#102a23}.day.today-day{border-color:var(--lime)}.day span,.day small{display:block}.day span{font-size:12px;color:var(--muted)}.day b{display:grid;place-items:center;width:34px;height:34px;margin:10px auto;border-radius:50%;font-size:12px;background:#1b3d33}.day.complete b{color:#10251f;background:var(--lime)}.day small{font-size:12px;color:#b7c6c1}.reset{width:100%;margin-top:18px;padding:11px;border:1px solid var(--line);border-radius:12px;background:transparent;color:var(--muted);cursor:pointer}.reset:hover{border-color:var(--danger);color:var(--danger)}.footer{justify-content:space-between;gap:12px;margin-top:18px;color:var(--muted);font-size:13px}.toast{position:fixed;right:22px;bottom:22px;padding:14px 18px;border-radius:14px;color:#0b201a;background:var(--lime);font-weight:800;box-shadow:0 14px 45px #0008;transform:translateY(100px);opacity:0;transition:.25s}.toast.show{transform:none;opacity:1}
+    @media(max-width:820px){.shell{width:min(100% - 22px,680px);padding-top:18px}.topbar{margin-bottom:34px}.date span{display:none}.members{display:flex;overflow-x:auto;padding:2px 2px 10px;scrollbar-width:none}.member{min-width:148px}.grid{grid-template-columns:1fr}.hint{display:none}.footer{align-items:flex-start;flex-direction:column}}
+    @media(max-width:480px){.topbar{align-items:flex-start}.date{padding:9px 11px}.date strong{font-size:13px}.brand p{display:none}.today,.side{padding:16px}.task{padding:12px}.week{gap:4px}.day{padding-inline:1px}.day b{width:30px;height:30px}.section-head h2{font-size:27px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><div class="mark" aria-hidden="true">↑</div><div><h1>一起练</h1><p>五个人，每天向前一点</p></div></div>
+      <div class="date" aria-label="今日日期"><strong id="date"></strong><span id="weekday"></span></div>
+    </header>
+
+    <section aria-labelledby="member-title">
+      <div class="section-head"><div><p class="eyebrow">Choose your player</p><h2 id="member-title">今天谁在练？</h2></div><p class="hint">点击头像切换打卡人</p></div>
+      <div class="members" id="members" role="group" aria-label="选择成员"></div>
+    </section>
+
+    <section class="grid" aria-label="打卡面板">
+      <div class="card today">
+        <div class="progress-copy"><div><p class="eyebrow">今日训练 · <span id="active-name"></span></p><strong><span id="done-count">0</span> / 6</strong></div><span id="percent">0%</span></div>
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><i id="progress-bar"></i></div>
+        <div class="tasks" id="tasks"></div>
+      </div>
+
+      <aside class="card side">
+        <div class="recent-head"><div><p class="eyebrow">Recent form</p><h2>近 7 天</h2></div></div>
+        <div class="summary"><span>本周已完成</span><strong id="week-total">0 项</strong></div>
+        <div class="week" id="week" aria-label="近七天打卡"></div>
+        <button class="reset" id="reset" type="button">清空当日记录</button>
+      </aside>
+    </section>
+
+    <footer class="footer"><span>记录保存在当前设备</span><span>Keep showing up.</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite">今日训练完成！真帅 🔥</div>
+
+  <script>
+    const members=[['Andy','A'],['阿嘉','嘉'],['宗宗','宗'],['康子','康'],['飞飞','飞']];
+    const exercises=[['⚡','热身','开合跳、动态拉伸'],['🤸','练肩','推举、侧平举、面拉'],['💪','练胸','卧推、夹胸、俯卧撑'],['🦵','练腿','深蹲、硬拉、弓步'],['🧗','练背','划船、引体、下拉'],['🎯','核心','平板支撑、卷腹']];
+    const key='together-fit-v1';
+    const today=new Date();
+    const pad=n=>String(n).padStart(2,'0');
+    const dayKey=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+    let active=localStorage.getItem(key+'-active')||members[0][0];
+    let records=JSON.parse(localStorage.getItem(key)||'{}');
+    const $=s=>document.querySelector(s);
+    const save=()=>localStorage.setItem(key,JSON.stringify(records));
+    const current=()=>records[active]?.[dayKey(today)]||[];
+    const setCurrent=value=>{records[active]??={};records[active][dayKey(today)]=value;save()};
+
+    function renderMembers(){
+      $('#members').innerHTML=members.map(([name,initial])=>`<button class="member" type="button" data-name="${name}" aria-pressed="${name===active}"><span class="avatar">${initial}</span><span><b>${name}</b><small>${(records[name]?.[dayKey(today)]||[]).length?'今日已开练':'还没开始'}</small></span></button>`).join('');
+      document.querySelectorAll('.member').forEach(btn=>btn.onclick=()=>{active=btn.dataset.name;localStorage.setItem(key+'-active',active);render()});
+    }
+    function renderTasks(){
+      const done=current();
+      $('#tasks').innerHTML=exercises.map(([icon,title,desc],i)=>`<button class="task ${done.includes(i)?'done':''}" type="button" data-index="${i}" aria-pressed="${done.includes(i)}"><span class="task-icon" aria-hidden="true">${icon}</span><span class="task-text"><b>${title}</b><small>${desc}</small></span><span class="check" aria-hidden="true">${done.includes(i)?'✓':''}</span></button>`).join('');
+      document.querySelectorAll('.task').forEach(btn=>btn.onclick=()=>toggle(Number(btn.dataset.index)));
+    }
+    function renderWeek(){
+      let total=0;
+      const days=Array.from({length:7},(_,i)=>{const d=new Date(today);d.setDate(today.getDate()-6+i);const count=(records[active]?.[dayKey(d)]||[]).length;total+=count;return {d,count}});
+      $('#week').innerHTML=days.map(({d,count},i)=>`<div class="day ${i===6?'today-day':''} ${count===6?'complete':''}"><span>${'日一二三四五六'[d.getDay()]}</span><b>${count}/6</b><small>${pad(d.getDate())}</small></div>`).join('');
+      $('#week-total').textContent=`${total} 项`;
+    }
+    function toggle(index){
+      const done=current();
+      const next=done.includes(index)?done.filter(i=>i!==index):[...done,index].sort();
+      setCurrent(next);render();
+      if(next.length===exercises.length){$('#toast').classList.add('show');setTimeout(()=>$('#toast').classList.remove('show'),2400)}
+    }
+    function render(){
+      const count=current().length,percent=Math.round(count/exercises.length*100);
+      $('#active-name').textContent=active;$('#done-count').textContent=count;$('#percent').textContent=percent+'%';
+      $('#progress-bar').style.width=percent+'%';$('.progress').setAttribute('aria-valuenow',count);
+      renderMembers();renderTasks();renderWeek();
+    }
+    const dateParts=new Intl.DateTimeFormat('zh-CN',{year:'numeric',month:'long',day:'numeric'}).format(today);
+    $('#date').textContent=dateParts;$('#weekday').textContent='星期'+'日一二三四五六'[today.getDay()];
+    $('#reset').onclick=()=>{setCurrent([]);render()};
+    render();
+
+    if(document.modelContext?.registerTool){
+      const update=({member,exercise})=>{const mi=members.findIndex(x=>x[0]===member),ei=exercises.findIndex(x=>x[1]===exercise);if(mi<0||ei<0)throw new Error('成员或训练项不存在');active=member;const done=current();if(!done.includes(ei))setCurrent([...done,ei].sort());localStorage.setItem(key+'-active',active);render();return {member,exercise,completed:true}};
+      document.modelContext.registerTool({name:'complete_workout_item',title:'完成训练项',description:'为指定成员完成今天的一项训练',inputSchema:{type:'object',properties:{member:{type:'string',enum:members.map(x=>x[0])},exercise:{type:'string',enum:exercises.map(x=>x[1])}},required:['member','exercise'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:false},execute:update}).catch?.(()=>{});
+    }
+  </script>
+</body>
+</html>
